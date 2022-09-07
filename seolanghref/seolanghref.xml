@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.1" type="plugin" group="system" method="upgrade">
+	<name>plg_system_seolanghref</name>
+	<author>Whykiki</author>
+	<creationDate>September 2022</creationDate>
+	<license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+	<authorEmail>info@whykiki.de</authorEmail>
+	<authorUrl>wir-lieben-webdesign.de</authorUrl>
+	<version>1.0.0</version>
+	<description>SEO Language HREF</description>
+	<files>
+		<filename plugin="seolanghref">seolanghref.php</filename>
+	</files>
+</extension>
