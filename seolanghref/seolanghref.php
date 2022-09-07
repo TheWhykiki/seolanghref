@@ -52,8 +52,6 @@ class PlgSystemSeolanghref extends CMSPlugin
 	    $app  = Factory::getApplication();
 	    $active = $app->getMenu()->getActive();
 
-		var_dump($app->isClient('site'));
-
 		if($app->isClient('site'))
 		{
 		    $associations = Associations::getAssociations('com_menus', '#__menu', 'com_menus.item', $active->id);
@@ -120,28 +118,4 @@ class PlgSystemSeolanghref extends CMSPlugin
 		$app->setBody($bodyNew);
 	}
 
-	/**
-	 * Suchen nach einzelnem Arrayelement auf Basis der aktuellen URL
-	 *
-	 * @param   string  $url      Aktuelle URL
-	 * @param   string  $langTag  e.g. de-ch
-	 *
-	 * @return  array
-	 *
-	 * @since   1.0.0
-	 */
-	protected function _searchForArray($url, $langTag)
-	{
-		$array = $this->datas;
-
-		foreach ($array as $key => $val)
-		{
-			if ($val[$langTag] === $url)
-			{
-				return $val;
-			}
-		}
-
-		return array();
-	}
 }
